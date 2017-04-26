@@ -1,6 +1,6 @@
-========================
-Foreman Ansible Playbook
-========================
+============================================================
+Foreman Ansible Playbook supporting PostgreSQL and powerdns
+============================================================
 
 |Travis| |License|
 
@@ -9,8 +9,13 @@ Foreman Ansible Playbook
 .. |License| image:: https://img.shields.io/github/license/adfinis-sygroup/foreman-ansible.svg?style=flat-square
    :target: LICENSE
 
-Ansible playbook to deploy a complete up and running Foreman instance within
-minutes.
+
+Quick Informations ?
+----------------------
+
+* Only for PostgreSQL with support for powerdns
+* For Mysql please check https://github.com/adfinis-sygroup/foreman-ansible
+* This playbook is using the repo https://github.com/adfinis-sygroup/foreman-ansible
 
 Features
 ========
@@ -20,10 +25,11 @@ complete and ready-to-use Foreman instance within minutes.
 It contains multiple different roles with numerous customizable variables,
 which provide the following features:
 
-* setup database (SQLite or MySQL)
+* setup database (PostgreSQL)
 * setup webserver (plain nginx as a proxy or nginx-passenger)
 * setup isc-dhcp-server
 * setup TFTP server
+* Setup powerdns
 * setup foreman-proxy
 * setup Foreman including configuration (templates, hosts, domains, etc.)
 
@@ -31,7 +37,7 @@ which provide the following features:
 instead the plain Foreman packages are used!**
 
 In addition this playbook makes use of `foreman-yml`_ to automatically configure
-Foreman through the API based on a YAML file, which includes adding all 
+Foreman through the API based on a YAML file, which includes adding all
 templates, OS, media, hosts, etc. and linking them accordingly.
 
 Please note that at the current time the following distributions are supported:
@@ -55,29 +61,7 @@ playbook is applied:
 
 Installation
 ============
-Below the required steps to execute the default playbook:
-
-1. Clone this repository
-2. Initialize the submodules containing the foreman-yml repository: ::
-
-   $ git submodule update --init
-
-3. Install and configure Ansible to manage the target server
-4. Create an inventory file containing either the hostname or IP address of
-   target machine: ::
-
-    $ echo "$TARGET_IP" > /tmp/inventory
-
-5. Use the playbook foreman.yml to deploy a default setup with MySQL,
-   nginx-passenger, TFTP, DHCP and foreman-proxy: :: 
-
-    $ ansible-playbook foreman.yml -i /tmp/inventory -u root
-
-6. After a successful deployment you should be able to access Foreman through 
-   http://$TARGET_IP/.
-
-The password of the ``admin`` user is by default set to ``foreman``. In addition
-``safemode_render`` is changed to ``false``.
+please check the installation part at https://github.com/adfinis-sygroup/foreman-ansible
 
 Examples
 ========
@@ -105,7 +89,9 @@ Below a short overview of all included roles:
 +-----------------+----------------------------------------------------+
 | isc_dhcp_server | install and configure isc-dhcp-server              |
 +-----------------+----------------------------------------------------+
-| mysql           | install MySQL, create users and databases          |
+| pgsql           | install PgSQL, create users and databases          |
++-----------------+----------------------------------------------------+
+| powerdns        | install and congifure powerdns                     |
 +-----------------+----------------------------------------------------+
 | nginx           | add upstream repos if requested and setup nginx    |
 +-----------------+----------------------------------------------------+
@@ -116,14 +102,6 @@ Below a short overview of all included roles:
 | tftp            | install and setup TFTP including PXE boot files    |
 +-----------------+----------------------------------------------------+
 
-Upcoming features
-=================
-See the issues page for a list of upcoming and planned features.
-
-Contributions
-=============
-Contributions are more than welcome! Please feel free to open new issues or
-pull requests.
 
 License
 =======
