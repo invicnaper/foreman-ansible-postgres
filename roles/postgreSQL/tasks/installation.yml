@@ -1,0 +1,25 @@
+# PostgreSQL support
+# @ author : Hamza Bourrahim
+# Done for ABlogix
+---
+- name: install pgsql
+  package:
+    name="{{ item }}"
+    state=present
+  with_items: "{{ pgsql_pkg }}"
+  register: pgsql_installed
+
+- name: init pgsql DB
+  command: "{{ pgsql_initdb_command }}"
+  become: true
+  become_user: postgres
+
+- name: enable pgsql service
+  service:
+    name="{{ pgsql_service }}"
+    enabled=yes
+
+- name: start pgsql service
+  service:
+    name="{{ pgsql_service }}"
+    state=started
