@@ -13,7 +13,7 @@ Foreman Ansible Playbook supporting PostgreSQL and powerdns
 
 .. image:: https://raw.githubusercontent.com/theforeman/foreman-graphics/master/logo/foreman_medium.png
 
-.. image:: https://upload.wikimedia.org/wikipedia/fr/4/4b/Ansible_logo.png
+.. image:: https://www.linuxtricks.fr/upload/ansible.png
 
 Quick Informations ?
 ----------------------
