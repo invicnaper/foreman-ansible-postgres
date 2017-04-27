@@ -107,6 +107,3 @@ See the `LICENSE`_ file.
 
 .. _LICENSE: LICENSE
 .. _foreman-yml: https://github.com/invicnaper/foreman-ansible-postgres/foreman-yml
-
-
-.. image:: http://i.imgur.com/UsfUsJT.png
