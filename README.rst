@@ -4,10 +4,14 @@ Foreman Ansible Playbook supporting PostgreSQL and powerdns
 
 |Travis| |License|
 
-.. |Travis| image:: https://img.shields.io/travis/adfinis-sygroup/foreman-ansible.svg?style=flat-square
-   :target: https://travis-ci.org/adfinis-sygroup/foreman-ansible
-.. |License| image:: https://img.shields.io/github/license/adfinis-sygroup/foreman-ansible.svg?style=flat-square
+.. |Travis| image:: https://img.shields.io/badge/license-GPLv3-blue.svg
    :target: LICENSE
+.. |License| image:: https://img.shields.io/badge/author-naper-blue.svg
+   :target: https://github.com/invicnaper/foreman-ansible-postgres/foreman-yml
+
+.. |License| image:: https://img.shields.io/badge/c-ABlogix-yellow.svg
+   :target: https://ablogix.fr
+
 
 
 Quick Informations ?
@@ -61,16 +65,7 @@ playbook is applied:
 
 Installation
 ============
-please check the installation part at https://github.com/adfinis-sygroup/foreman-ansible
-
-Examples
-========
-The templates directory contains example `foreman-yml`_ YAML templates to
-give you a head start to bootstrap Foreman.
-
-In addition the variables overwritten in vars/example.yml are the minimum
-amount of variables that need to be defined, e.g. the MySQL role does not
-create any users or databases by default.
+Please check the installation part at https://github.com/adfinis-sygroup/foreman-ansible
 
 Roles
 =====
@@ -110,4 +105,7 @@ GNU GENERAL PUBLIC LICENSE Version 3
 See the `LICENSE`_ file.
 
 .. _LICENSE: LICENSE
-.. _foreman-yml: https://github.com/adfinis-sygroup/foreman-yml
+.. _foreman-yml: https://github.com/invicnaper/foreman-ansible-postgres/foreman-yml
+
+
+.. image:: http://i.imgur.com/UsfUsJT.png
