@@ -11,7 +11,9 @@ Foreman Ansible Playbook supporting PostgreSQL and powerdns
 .. |License| image:: https://img.shields.io/badge/c-ABlogix-yellow.svg
    :target: https://ablogix.fr
 
+.. image:: https://raw.githubusercontent.com/theforeman/foreman-graphics/master/logo/foreman_medium.png
 
+.. image:: https://upload.wikimedia.org/wikipedia/fr/4/4b/Ansible_logo.png
 
 Quick Informations ?
 ----------------------
@@ -64,7 +66,7 @@ playbook is applied:
 
 Installation
 ============
-Please check the installation part at https://github.com/adfinis-sygroup/foreman-ansible
+Please check the installation part at https://github.com/adfinis-sygroup/foreman-ansible#installation
 
 Roles
 =====
