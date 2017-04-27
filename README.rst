@@ -6,9 +6,8 @@ Foreman Ansible Playbook supporting PostgreSQL and powerdns
 
 .. |Travis| image:: https://img.shields.io/badge/license-GPLv3-blue.svg
    :target: LICENSE
-.. |License| image:: https://img.shields.io/badge/author-naper-blue.svg
-   :target: https://github.com/invicnaper/foreman-ansible-postgres/foreman-yml
-
+.. |License| image:: https://img.shields.io/badge/author-Hamza-blue.svg
+   :target: https://naper.eu
 .. |License| image:: https://img.shields.io/badge/c-ABlogix-yellow.svg
    :target: https://ablogix.fr
 
