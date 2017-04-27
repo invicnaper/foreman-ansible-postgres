@@ -13,6 +13,17 @@
   command: "{{ pgsql_initdb_command }}"
   become: true
   become_user: postgres
+  ignore_errors: True
+
+- name: Install PostgreSQL config file
+  template: src="{{ pgsql_template_conf }}"
+            dest="{{ pgsql_conf_file }}"
+            owner={{ postgresql.user }} group={{ postgresql.group }}
+
+- name: Install PostgreSQL hba file
+  template: src="{{ pgsql_template_hba }}"
+            dest="{{ pgsql_hba_file }}"
+            owner={{ postgresql.user }} group={{ postgresql.group }}
 
 - name: enable pgsql service
   service:

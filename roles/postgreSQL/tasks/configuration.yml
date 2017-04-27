@@ -20,16 +20,6 @@
   with_items: "{{ pgsql_users }}"
 
 
-- name: Install PostgreSQL config file
-  template: src=postgresql.conf
-            dest=/etc/postgresql/{{ postgresql.version }}/main/postgresql.conf
-            owner={{ postgresql.user }} group={{ postgresql.group }}
-
-- name: Install PostgreSQL hba file
-  template: src=pg_hba.conf
-            dest=/etc/postgresql/{{ postgresql.version }}/main/pg_hba.conf
-            owner={{ postgresql.user }} group={{ postgresql.group }}
-
 - name: restart pgsql service
   service:
     name="{{ pgsql_service }}"

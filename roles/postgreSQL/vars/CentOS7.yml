@@ -9,9 +9,15 @@ pgsql_pkg:
 
 pgsql_service: postgresql
 
-pgsql_initdb_command: postgresql-setup initdb creates=/var/lib/pgsql/data/pg_hba.conf
+pgsql_initdb_command: postgresql-setup initdb
 
-pgsql_conf_file: /etc/postgresql/9.5/main/postgresql.conf
+pgsql_conf_file: /var/lib/pgsql/data/postgresql.conf
+
+pgsql_hba_file: /var/lib/pgsql/data/pg_hba.conf
+
+pgsql_template_conf: postgresql_centos.conf
+
+pgsql_template_hba: pg_hba_centos.conf
 
 pgsql_root_user_hosts:
   - localhost
