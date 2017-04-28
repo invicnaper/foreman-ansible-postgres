@@ -2,7 +2,7 @@
 tftp_user: tftp
 tftp_group: tftp
 
-tftp_dir: /srv/tftp
+tftp_dir: /var/lib/tftp
 
 tftp_pxe_dir:
   - boot
